@@ -15,11 +15,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-}
-body{
-    margin:20px 60px 0 60px;
-   
     
+}
+/* common */
+.p-15{
+    padding: 0 25px 0 25px;
 }
 
 header{
@@ -27,12 +27,15 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
      
 }
 
 header div nav ul{
     list-style: none;
     display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 header div nav ul li{
     margin-left: 30px;
@@ -121,7 +124,7 @@ header >div>h3:hover::before{
     border-radius: 50%;
     box-shadow: 0 0 20px black;
     position: relative;
-    border-radius: 15px;
+   
 
 }
 /* sponsers sec */
@@ -162,6 +165,9 @@ header >div>h3:hover::before{
     box-shadow: 0 0 15px gray;
     cursor: pointer;
 }
+.pcard img{
+    border-radius: 10px;
+}
 .pcard:hover{
     box-shadow: 0 0 50px gray;
 }
@@ -180,6 +186,7 @@ header >div>h3:hover::before{
     color: var(--btn-color);
     float: right;
     margin-top:20px ;
+    margin-right: 35px;
 }
 .btn2>i{
     padding-left: 5px;
@@ -265,13 +272,59 @@ footer > ul>li{
     color: gray;
     font-size: 15px;
 }
+@media screen and (max-width: 992px) {
+    .logo{
+        width: 30%;
+    }
+    .navbar{
+        
+        width: 70%;
+    }
+    header div nav ul li a{
+        font-size: 10px;
+    }
+    header div h3{
+        font-size: 20px;
+    }
+    /* himg */
+    #sec2 div> .himg{
+        width: 250px;
+        height: 250px;
+    }
+    /* moto */
+    .moto>h1{
+        font-size: 25px;
+    }
+    .moto > p{
+        font-size: 10px;
+    }
+
+    /* products */
+    .products{
+        grid-template-columns: repeat(2,1fr);
+        margin: auto;
+    }
+    .pcard{
+        width: 320px;
+        margin: auto;
+    }
+    .slider{
+        width: 600px;
+        background-image: cover;
+    }
+   
+
+}
 @media  screen and (max-width:600px) {
 
     body{
         margin: 0;
+       
     }
     #sec2 div> .himg{
         font-size: 25px;
+        height: 260px;
+        width:260px;
     }
     #sec1>div{
         width: 100%;
@@ -325,6 +378,7 @@ footer > ul>li{
     }
     .pcard{
         box-shadow: 0 0 10px gray;
+       
     }
     /* products */
     .products{
@@ -334,7 +388,7 @@ footer > ul>li{
         width: 100%;
     }
     .pcard{
-        width: 300px;
+        width: 280px;
         margin: auto;
     }
     #sec5{
