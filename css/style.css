@@ -1,1 +1,333 @@
 @import url('../webbox/css/main.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Roboto&display=swap');
+/* 
+    Only the required file are used as instruction
+*/
+:root{
+    --primary-color:white;
+    --btn-color:#E02C6D;
+    --footer-color:#0A0826;
+}
+/* style for header and nav */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    margin:20px 60px 0 60px;
+   
+    
+}
+
+header{
+    background-color:var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     
+}
+
+header div nav ul{
+    list-style: none;
+    display: flex;
+}
+header div nav ul li{
+    margin-left: 30px;
+}
+header div nav ul li a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 1.5rem;
+    color: black;
+    position: relative;
+
+}
+header div nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--btn-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+header div nav ul li a:hover::before{
+    width: 100%;
+}
+header>div>h3{
+    font-size: 30px;
+    position: relative;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    cursor: pointer;
+}
+
+header >div>h3:hover::before{
+    width: 100%;
+}
+/* section 2 */
+#sec2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 50px;
+   
+    
+}
+.moto h1{
+    font-size: 3rem;
+    
+}
+.moto p{
+    font-size: 25px;
+    text-align: justify;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.btn1{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--btn-color);
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+
+}
+.btn1 i{
+    padding-left: 10px;
+}
+.btn1:hover{
+    background-color: dodgerblue;
+
+}
+#sec2 div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sec2 div> .himg{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px black;
+    position: relative;
+
+}
+/* sponsers sec */
+#sec3{
+    margin-top: 50px;
+    /* border-top: 1px solid gray; */
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    
+}
+#sec3>div{
+   
+    position: relative;
+}
+#sec3>div>img{
+    width: 50%;
+    height: 100%;
+}
+/* sec4 product sec */
+#sec4{
+    
+    margin: 50px 0;
+}
+#sec4 > h1{
+    padding-bottom: 100px;
+    font-size: 3rem;
+    text-align: center;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+.pcard{
+    width: 330px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 15px gray;
+    cursor: pointer;
+}
+.pcard:hover{
+    box-shadow: 0 0 50px gray;
+}
+.pcard h5{
+    font-size: 20px;
+}
+.pcard>p{
+    font-size: 22px;
+    font-weight: 600;
+}
+.pcard>ul{
+    list-style: none;
+}
+.btn2{
+    text-decoration: none;
+    color: var(--btn-color);
+    float: right;
+    margin-top:20px ;
+}
+.btn2>i{
+    padding-left: 5px;
+}
+.btn2:hover{
+    text-decoration: underline;
+}
+#sec5{
+    padding: 10px;
+    background: url(../images/pattern.png);
+   
+}
+#sec5 h1{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    padding: 20px;
+
+}
+.slider{
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    background: url(../images/1.jpg);
+    background-position: center;
+    background-size: cover;
+	animation: slide 8s linear infinite;
+}
+ #sec5:hover{
+    animation: ani1 2s linear infinite;
+}
+@keyframes slide {
+    0%{
+        
+        background-image: url(../images/1.jpg);
+    }
+    50%{
+        background-image: url(../images/2.jpg);
+    }
+}
+@keyframes ani1 {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 40px 0;
+    }
+}
+footer{
+    background-color: var(--footer-color);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+ footer>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+footer>h3{
+    font-size: 35px;
+}
+footer>p{
+    margin: 10px 0;
+}
+footer > ul>li>i{
+    font-size: 22px;
+}
+footer > ul>li{
+
+    margin-left: 10px;
+
+}
+
+@media  screen and (max-width:600px) {
+
+    body{
+        margin: 0;
+    }
+    #sec1>div{
+        width: 100%;
+        
+    }
+    
+    #sec1>div>h3{
+        text-align: center;
+        font-size: 20px;
+    }
+    .navbar{
+        display: none;
+    }
+    /* sec1 */
+    #sec2{
+       
+        grid-template-columns: repeat(1,1fr);
+    }
+    .moto{
+       
+        order: 1;
+
+    }
+    .moto h1{
+        text-align: center;
+        font-size: 28px;
+    }
+    .moto p{
+        text-align: center;
+        font-size: 14px;
+        padding-left:15px ;
+    }
+    .moto .btn1{
+        margin: auto;
+    }
+    /* sec3 */
+        #sec3{
+            grid-template-columns: repeat(3,1fr);
+           row-gap: 20px;
+           padding-left: 15px;
+        }
+    /* sec4 */
+    #sec4 h1{
+        font-size: 22px;
+        padding-bottom: 25px;
+    }
+    .pcard{
+        box-shadow: 0 0 10px gray;
+    }
+    /* products */
+    .products{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .pcard>img{
+        width: 100%;
+    }
+    .pcard{
+        width: 300px;
+        margin: auto;
+    }
+    #sec5{
+        display: none;
+    }
+    footer h3{
+        font-size: 20px;
+    }
+    footer p{
+        font-size: 11px;
+    }
+    
+}
