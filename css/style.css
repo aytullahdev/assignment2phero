@@ -74,6 +74,10 @@ header>div>h3{
 header >div>h3:hover::before{
     width: 100%;
 }
+.cimg{
+    position: absolute;
+    z-index: -1;
+}
 /* section 2 */
 #sec2{
     display: grid;
@@ -263,6 +267,9 @@ footer > ul>li{
     margin-left: 10px;
 
 }
+.pcard img{
+    width: 100%;
+}
 /* rating */
 .rating{
     font-size: 12px;
@@ -272,7 +279,27 @@ footer > ul>li{
     color: gray;
     font-size: 15px;
 }
+@media screen and (max-width: 1209px) {
+    .products{
+        grid-template-columns: repeat(3,300px);
+        gap: 40px;
+        margin: auto;
+        
+    }
+    .pcard{
+        width: 100%;
+        margin: auto;
+    }
+    .pcard img{
+        
+        width: 100%;
+    }
+}
 @media screen and (max-width: 992px) {
+    .cimg{
+        width: 300px;
+        height: 300px;
+    }
     .logo{
         width: 30%;
     }
